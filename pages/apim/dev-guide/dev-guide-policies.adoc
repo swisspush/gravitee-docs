@@ -181,7 +181,7 @@ public void onRequest(Request request, Response response, PolicyChain policyChai
 }
 ----
 
-NOTE: The `PolicyChain` *must always be called to end an _on Request_ processing*. Be ware to make a call to the `PolicyChain#doNext()` or `PolicyChain#failWith()` to correctly end the _on Request_ processing.
+NOTE: The `PolicyChain` *must always be called to end an _on Request_ processing*. Be ware to make a call to the `PolicyChain#doNext()`, `PolicyChain#failWith()` or `PolicyChain#doBreak()` to correctly end the _on Request_ processing.
 
 [discrete]
 === Apply _policy_ on the Response phase
@@ -226,7 +226,7 @@ private static boolean isASuccessfulResponse(Response response) {
 }
 ----
 
-NOTE: The `PolicyChain` *must always be called to end an _on Response_ processing*. Be ware to make a call to the `PolicyChain#doNext()` or `PolicyChain#failWith()` to correctly end the _on Response_ processing.
+NOTE: The `PolicyChain` *must always be called to end an _on Response_ processing*. Be ware to make a call to the `PolicyChain#doNext()`, `PolicyChain#failWith()` or `PolicyChain#doBreak()` to correctly end the _on Response_ processing.
 
 [discrete]
 === Apply _policy_ on both of Request and Response phases
